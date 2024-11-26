@@ -1,4 +1,4 @@
-/*
+
 
 CREATE TABLE magasin (
     Id_magasin INT PRIMARY KEY not null,
@@ -24,7 +24,7 @@ CREATE TABLE Client (
 
 );
 
-*/
+
 
 CREATE TABLE [Transaction](
 	Id_transaction bigint primary key not null,
