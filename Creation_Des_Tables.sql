@@ -18,7 +18,7 @@ CREATE TABLE Promotion (
 );
 
 CREATE TABLE client (
-	cd_client bigint not null,
+	id_client bigint not null,
 	nom_client varchar(255) not null,
 	categorie_client varchar(50) 
 
@@ -33,7 +33,7 @@ CREATE TABLE [transaction](
 	saison varchar(50) not null,
 	produits TEXT not null,
 	methode_paiement varchar(255) not null,
-	promotion_appliquee varchar (255),
+	promotion_appliquee TEXT,
 	FOREIGN KEY (id_magasin) REFERENCES magasin(id_magasin),
 	FOREIGN KEY (id_client) REFERENCES client(id_client)
 );
@@ -43,7 +43,7 @@ CREATE TABLE produit(
 	nom_produit varchar(50) not null,
 	category_produit varchar(50),
 	quantite_en_stock int not null,
-	prix_unitaire decimal (10,2),
+	prix_unitaire decimal (10,2) not null,
 	[description] text
 	foreign key (Id_promotion) references promotion(id_promotion)
 
