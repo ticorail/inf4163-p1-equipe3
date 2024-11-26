@@ -5,10 +5,12 @@
 
 */
 
--- Le nombre de produit distinct 41611
+-- Le nombre de produit distinct 81
 
-SELECT COUNT(DISTINCT Product) AS nombre_de_produits_distincts
-FROM Toutes_Transactions;
+SELECT count (DISTINCT TRIM(REPLACE(REPLACE(value, '[', ''), ']', ''))) AS Product
+FROM Toutes_Transactions
+CROSS APPLY STRING_SPLIT(Product, ',')
+ORDER BY Product;
 
 -- Lieu de vente : 10
 /*Miami, Los Angeles, Seattle, Atlanta, New York, Houston, Boston, Dallas, Chicago, San Francisco */
