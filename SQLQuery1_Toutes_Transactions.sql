@@ -4,6 +4,26 @@
  Mes tests se font sur les premieres 60 miles lignes de donnees.
 
 */
+-- Creation de la table Toutes_Transactions
+
+CREATE TABLE toutes_transactions(
+	Transaction_Id bigint primary key not null,
+	Date datetime not null,
+	Customer_Name Varchar(50) not null,
+	Product nvarchar(255),
+	Total_Items tinyint not null,
+	Total_cost float not null,
+	Payment_method varchar(50) not null,
+	City varchar(50) not null,
+	Store_type varchar(50) not null,
+	Discount_applied bit not null,
+	Customer_category nvarchar(50) not null,
+	Season nvarchar(50) not null,
+	Promotion nvarchar(50) not null
+);
+
+
+
 
 -- Le nombre de produit distinct 81
 
