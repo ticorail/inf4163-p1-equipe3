@@ -34,8 +34,8 @@ CREATE TABLE [transaction](
 	produits TEXT not null,
 	methode_paiement varchar(255) not null,
 	promotion_appliquee varchar (255),
-	FOREIGN KEY (id_magasin) REFERENCES Magasin(Id_magasin),
-	FOREIGN KEY (id_client) REFERENCES Client(Id_client)
+	FOREIGN KEY (id_magasin) REFERENCES magasin(id_magasin),
+	FOREIGN KEY (id_client) REFERENCES client(id_client)
 );
 
 CREATE TABLE produit(
@@ -45,7 +45,7 @@ CREATE TABLE produit(
 	quantite_en_stock int not null,
 	prix_unitaire decimal (10,2),
 	[description] text
-	foreign key (Id_promotion) references Promotion(Id_promotion)
+	foreign key (Id_promotion) references promotion(id_promotion)
 
 );
 
