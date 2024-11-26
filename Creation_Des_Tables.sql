@@ -36,7 +36,7 @@ CREATE TABLE [Transaction](
 	promotion_appliquee varchar (255),
 	FOREIGN KEY (Id_magasin) REFERENCES Magasin(Id_magasin),
 	FOREIGN KEY (Id_client) REFERENCES Client(Id_client)
-)
+);
 
 CREATE TABLE Produit(
 	Id_produit int primary key not null,
@@ -47,7 +47,7 @@ CREATE TABLE Produit(
 	[Description] text
 	foreign key (Id_promotion) references Promotion(Id_promotion)
 
-)
+);
 
 
 
